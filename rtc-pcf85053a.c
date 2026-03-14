@@ -1,5 +1,13 @@
 /* https://lkml.org/lkml/2025/5/6/636 */
 /*----------dts changes---------------*/
+&i2c{bus number on which rtc detected ($i2cdetect -y <busno>} {
+    status = "okay";
+
+    rtc@6a {
+        compatible = "nxp,pcf85053a";
+        reg = <0x6a>;
+    };
+};
 /*-----------------------------------*/
 // SPDX-License-Identifier: GPL-2.0
 // Copyright 2025 NXP
