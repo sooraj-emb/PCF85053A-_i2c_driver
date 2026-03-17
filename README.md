@@ -44,8 +44,18 @@ Network appliances, industrial controllers, white goods.
 Any system with long unattended runtime or dual I²C domains (e.g., main CPU + management processor).
 Battery-powered IoT/embedded devices where you want extra SRAM without another chip.
 
+
 Comparison to Similar NXP RTCs
 
 PCF85063A — Simpler tiny RTC, single I²C, no dual bus, no 128-byte SRAM.
 PCF85263A — Very feature-rich (timestamp on power events, more alarms, etc.), but usually single I²C.
 PCF85053A stands out mainly for the dual I²C buses + battery-backed SRAM combo, making it great for server/BMC or secure/boot scenarios.
+
+
+/*********************************************************************/
+root@machine:~# dmesg | grep rtc
+[    4.473140] rtc-pcf85053a 12-006f: registered as rtc0
+[    4.480492] rtc-pcf85053a 12-006f: setting system clock to 2026-03-16T14:27:55 UTC (1773671275)
+root@machine:~#
+
+/*********************************************************************/
