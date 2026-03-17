@@ -52,10 +52,8 @@ PCF85263A — Very feature-rich (timestamp on power events, more alarms, etc.), 
 PCF85053A stands out mainly for the dual I²C buses + battery-backed SRAM combo, making it great for server/BMC or secure/boot scenarios.
 
 
-/*********************************************************************/
-root@machine:~# dmesg | grep rtc
-[    4.473140] rtc-pcf85053a 12-006f: registered as rtc0
-[    4.480492] rtc-pcf85053a 12-006f: setting system clock to 2026-03-16T14:27:55 UTC (1773671275)
-root@machine:~#
 
-/*********************************************************************/
+root@machine:~# dmesg | grep rtc
+$ rtc-pcf85053a 12-006f: registered as rtc0
+$ rtc-pcf85053a 12-006f: setting system clock to 2026-03-16T14:27:55 UTC (1773671275)
+
